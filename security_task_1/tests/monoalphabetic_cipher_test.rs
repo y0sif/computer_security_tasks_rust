@@ -29,7 +29,7 @@ mod tests {
     fn test_find_key() {
         let main_plain = "meetmeafterthetogaparty".to_uppercase();
         let main_cipher = "phhwphdiwhuwkhwrjdsduwb".to_uppercase();
-        let re = Regex::new("d.{3}hijk.{4}p.rs.u.w.{4}b.").unwrap();
+        let re = Regex::new(&"d.{3}hijk.{4}p.rs.u.w.{4}b.".to_uppercase()).unwrap();
         
         let key = find_key(main_plain, main_cipher);
 
