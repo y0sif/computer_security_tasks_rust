@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use linked_hash_set::LinkedHashSet;
 pub struct PlayFairCipher {
     key_matrix: Vec<Vec<char>>,
 }
@@ -12,7 +12,7 @@ impl PlayFairCipher {
 
     // Generates the 5x5 key matrix for Playfair Cipher
     fn generate_key_matrix(key: String) -> Vec<Vec<char>> {
-        let mut used = HashSet::new();
+        let mut used = LinkedHashSet::new();
         let k = key.to_uppercase().replace("[^A-Z]", "").replace("J", "I");
         
         for c in key.chars() {
