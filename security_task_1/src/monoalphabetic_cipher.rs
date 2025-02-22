@@ -41,7 +41,7 @@ pub fn encrypt(plaintext: String, key: String) -> String {
 }
 
 pub fn decrypt(ciphertext: String, key: String) -> String {
-    let mut decryption_map = generate_decryption_map(key);
+    let decryption_map = generate_decryption_map(key);
     let ciphertext = ciphertext.to_uppercase();
     let decrypted_text = String::new();
     
