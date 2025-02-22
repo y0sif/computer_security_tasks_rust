@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash};
+use std::collections::HashMap;
 
 // TODO: Implement this method to generate a substitution map from A-Z using the provided key
 fn generate_encryption_map(key: String) -> HashMap<char, char> {
