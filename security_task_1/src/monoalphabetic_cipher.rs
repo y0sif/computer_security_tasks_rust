@@ -29,7 +29,7 @@ fn generate_decryption_map(key: String) -> HashMap<char, char> {
 }
 
 pub fn encrypt(plaintext: String, key: String) -> String {
-    let encryption_map = generate_decryption_map(key);
+    let encryption_map = generate_encryption_map(key);
     let plaintext = plaintext.to_uppercase();
     let encryption_text = String::new();
     
