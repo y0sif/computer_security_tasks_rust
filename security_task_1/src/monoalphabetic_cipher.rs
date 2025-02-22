@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash};
+use std::collections::HashMap;
 
 // TODO: Implement this method to generate a substitution map from A-Z using the provided key
 fn generate_encryption_map(key: String) -> HashMap<char, char> {
@@ -29,7 +29,7 @@ fn generate_decryption_map(key: String) -> HashMap<char, char> {
 }
 
 pub fn encrypt(plaintext: String, key: String) -> String {
-    let encryption_map = generate_decryption_map(key);
+    let encryption_map = generate_encryption_map(key);
     let plaintext = plaintext.to_uppercase();
     let encryption_text = String::new();
     
@@ -41,7 +41,7 @@ pub fn encrypt(plaintext: String, key: String) -> String {
 }
 
 pub fn decrypt(ciphertext: String, key: String) -> String {
-    let mut decryption_map = generate_decryption_map(key);
+    let decryption_map = generate_decryption_map(key);
     let ciphertext = ciphertext.to_uppercase();
     let decrypted_text = String::new();
     
