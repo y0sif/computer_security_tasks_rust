@@ -2,5 +2,5 @@
 
 members = [
     "security_task_1",
-    "security_task_2",
+    "security_task_2", "security_task_3",
 ]
